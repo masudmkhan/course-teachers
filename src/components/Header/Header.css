@@ -1,0 +1,11 @@
+.header{
+    text-align: center;
+    background-color: rgb(245, 217, 180);
+    padding: 5px;
+    border-radius: 7px;
+    font-size: 30px;
+}
+.budget{
+    font-weight: bold;
+    color: rgb(97, 93, 59);
+}
