@@ -1,8 +1,10 @@
 import React from 'react';
-import './Teacher.css'
+import './Teacher.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faShoppingCart } from '@fortawesome/free-solid-svg-icons';
 
 const Teacher = (props) => {
-    const {name, img, age, subject, totalClass, salary, rating} = props.teacher;
+    const { name, img, age, subject, totalClass, salary, } = props.teacher;
     return (
         <div className='teacher'>
             <img src={img} alt="" />
@@ -16,7 +18,7 @@ const Teacher = (props) => {
                 <br />
                 Salary: <span className='teacher-details'>${salary}</span>
             </p>
-            <button onClick={props.addToCart} className='add-to-cart'>Add To Cart</button>
+            <button onClick={props.addToCart} className='add-to-cart'><FontAwesomeIcon icon={faShoppingCart} /> Add To Cart</button>
         </div>
     );
 };

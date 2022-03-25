@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import SelectedTeachers from '../SelectedTeachers/SelectedTeachers';
-import './Cart.css'
+import './Cart.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faStore } from '@fortawesome/free-solid-svg-icons';
 
 const Cart = (props) => {
     const [remainingTeachers, setRemainingTeachers] = useState([]);
@@ -39,16 +41,16 @@ const Cart = (props) => {
                     <div className='cart-quantity'>${totalSalary}</div>
                 </div>
                 <div className='buy-cart'>
-                    <button className='buy-teachers'>Buy Now</button>
+                    <button className='buy-teachers'><FontAwesomeIcon icon={faStore} /> Buy Now</button>
                 </div>
             </div>
             <div className='cart-teachers'>
-               {
-                   props.allTeachers.map(teacher => <SelectedTeachers 
-                    key = {teacher.key}
-                    teacher={teacher}
-                    removeFromCart = { () => removeFromCart(teacher)}></SelectedTeachers>)
-               }
+                {
+                    props.allTeachers.map(teacher => <SelectedTeachers
+                        key={teacher.key}
+                        teacher={teacher}
+                        removeFromCart={() => removeFromCart(teacher)}></SelectedTeachers>)
+                }
             </div>
         </div>
 

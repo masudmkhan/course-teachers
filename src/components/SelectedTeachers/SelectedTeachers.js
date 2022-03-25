@@ -2,7 +2,7 @@ import React from 'react';
 import './SelectedTeachers.css'
 
 const SelectedTeachers = (props) => {
-    const {img, name, salary} = props.teacher;
+    const { img, name, salary } = props.teacher;
     return (
         <div className='selected-teachers'>
             <img src={img} alt="" />
