@@ -1,0 +1,27 @@
+.selected-teachers{
+    background-image: linear-gradient(270deg, burlywood, white);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-radius: 7px;
+    margin: 10px;
+    font-size: 14px;
+    font-weight: bold;
+}
+.selected-teachers img{
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+}
+.btn-remove{
+    background-color: red;
+    color: white;
+    border: 1px solid red;
+    font-weight: bold;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+.btn-remove:hover{
+    font-weight: bolder;
+}

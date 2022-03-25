@@ -1,0 +1,19 @@
+.main-cart{
+    border: 3px solid gray;
+    padding: 10px;
+    margin-top: 20px;
+    border-radius: 7px;
+    background-image: linear-gradient(0deg, white, rgba(255, 255, 255, 0.075));
+}
+.cart-heading{
+    text-align: center;
+}
+.cart-body{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.cart-quantity{
+    padding-left: 20px;
+    margin-left: 20px;
+    font-weight: bold;
+}

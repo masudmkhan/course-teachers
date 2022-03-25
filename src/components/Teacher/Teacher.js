@@ -14,9 +14,9 @@ const Teacher = (props) => {
                 <br />
                 Classes: <span className='teacher-details'>{totalClass}</span>
                 <br />
-                Salary: <span className='teacher-details'>{salary}</span>
+                Salary: <span className='teacher-details'>${salary}</span>
             </p>
-            <button className='add-to-cart'>Add To Cart</button>
+            <button onClick={props.addToCart} className='add-to-cart'>Add To Cart</button>
         </div>
     );
 };
