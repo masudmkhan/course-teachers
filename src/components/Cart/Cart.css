@@ -17,3 +17,21 @@
     margin-left: 20px;
     font-weight: bold;
 }
+.buy-cart{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+.buy-teachers{
+    background-color: lemonchiffon;
+    border: 1px solid gray;
+    border-radius: 5px;
+    padding: 5px 35px;
+    cursor: pointer;
+}
+.buy-teachers:hover{
+    font-weight: bolder;
+    font-size: 16px;
+    padding: 3px 28px;
+}

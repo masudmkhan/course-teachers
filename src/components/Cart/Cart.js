@@ -38,6 +38,9 @@ const Cart = (props) => {
                     <div>Salary:</div>
                     <div className='cart-quantity'>${totalSalary}</div>
                 </div>
+                <div className='buy-cart'>
+                    <button className='buy-teachers'>Buy Now</button>
+                </div>
             </div>
             <div className='cart-teachers'>
                {
