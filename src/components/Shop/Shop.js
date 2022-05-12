@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Cart from '../Cart/Cart';
 import Teacher from '../Teacher/Teacher';
+import { addToDb } from '../utilities/FakeDB/FakeDB';
 import './Shop.css'
 
 const Shop = () => {
@@ -20,6 +21,7 @@ const Shop = () => {
             const newTeachers = [...cart, teacher];
             setCart(newTeachers);
         }
+        addToDb(teacher.key);
     };
 
     return (

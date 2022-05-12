@@ -3,8 +3,10 @@ import SelectedTeachers from '../SelectedTeachers/SelectedTeachers';
 import './Cart.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faStore } from '@fortawesome/free-solid-svg-icons';
+import { clearDb, removeFromDb } from '../utilities/FakeDB/FakeDB';
 
 const Cart = (props) => {
+
     const [remainingTeachers, setRemainingTeachers] = useState([]);
 
     const totalTeachers = props.allTeachers.length;
@@ -13,7 +15,7 @@ const Cart = (props) => {
     for (const eachTeacher of props.allTeachers) {
         totalClass = totalClass + eachTeacher.totalClass;
         totalSalary = totalSalary + eachTeacher.salary;
-    }
+    };
 
     const removeFromCart = (teacher) => {
         const index = props.allTeachers.indexOf(teacher);
@@ -23,7 +25,14 @@ const Cart = (props) => {
         else {
             setRemainingTeachers(props.allTeachers.splice(index, 1));
         }
-    }
+        removeFromDb(teacher.key);
+    };
+
+    const buyTeachers = () => {
+        setRemainingTeachers(props.allTeachers.splice(0, totalTeachers));
+        clearDb();
+    };
+
     return (
         <div>
             <div className='main-cart'>
@@ -41,7 +50,7 @@ const Cart = (props) => {
                     <div className='cart-quantity'>${totalSalary}</div>
                 </div>
                 <div className='buy-cart'>
-                    <button className='buy-teachers'><FontAwesomeIcon icon={faStore} /> Buy Now</button>
+                    <button onClick={() => buyTeachers()} className='buy-teachers'><FontAwesomeIcon icon={faStore} /> Buy Now</button>
                 </div>
             </div>
             <div className='cart-teachers'>
